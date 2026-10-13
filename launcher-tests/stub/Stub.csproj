@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net48</TargetFramework><AssemblyName>EmuHawk</AssemblyName></PropertyGroup>
+</Project>

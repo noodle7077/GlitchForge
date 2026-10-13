@@ -1,0 +1,8 @@
+PASS generated test ROM running on NES core
+PASS memory mutation through real BizHawk domain
+PASS undo through real BizHawk domain
+PASS savestate save and restore
+PASS production external tool discovered and dependencies injected
+PASS production UI blast stash undo and replay actions
+PASS automatic blast every 30 frames
+PASS integration complete

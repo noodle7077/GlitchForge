@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.vs/
+BizHawk/
+work/
+*.user
+*.State
+*.nes
+*.sfc
+*.smc
+*.gb
+*.gba
+*.zip
+GlitchForge.exe
+GlitchForge.dll

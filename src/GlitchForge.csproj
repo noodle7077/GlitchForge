@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>GlitchForge</AssemblyName>
+    <BizHawkDir Condition="'$(BizHawkDir)' == ''">$(MSBuildThisFileDirectory)..\BizHawk</BizHawkDir>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="BizHawk.Client.Common"><HintPath>$(BizHawkDir)\dll\BizHawk.Client.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BizHawk.Client.EmuHawk"><HintPath>$(BizHawkDir)\EmuHawk.exe</HintPath><Private>false</Private></Reference>
+    <Reference Include="BizHawk.Common"><HintPath>$(BizHawkDir)\dll\BizHawk.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BizHawk.Emulation.Common"><HintPath>$(BizHawkDir)\dll\BizHawk.Emulation.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BizHawk.WinForms.Controls"><HintPath>$(BizHawkDir)\dll\BizHawk.WinForms.Controls.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckBizHawk" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(BizHawkDir)\EmuHawk.exe')" Text="Set BizHawkDir to your extracted BizHawk 2.11.1 directory." />
+  </Target>
+</Project>

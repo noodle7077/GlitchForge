@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>GlitchForge</AssemblyName>
+    <RootNamespace>GlitchForge.Launcher</RootNamespace>
+    <Version>1.1.0</Version>
+    <Product>GlitchForge BizHawk Launcher</Product>
+    <Description>Installs and launches the GlitchForge real-time corruptor in BizHawk.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <EmbeddedResource Include="../GlitchForge.dll" LogicalName="GlitchForge.Plugin.dll" />
+  </ItemGroup>
+</Project>
